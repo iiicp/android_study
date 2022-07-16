@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn_textview = findViewById(R.id.btn_textview);
-        btn_textview.setOnClickListener(new View.OnClickListener() {
+        Button btn1 = findViewById(R.id.btn_textview);
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, TextViewActivity.class);
@@ -22,11 +22,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btn = findViewById(R.id.btn_button);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btn2 = findViewById(R.id.btn_button);
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, ButtonActivity.class);
+                startActivity(i);
+            }
+        });
+
+        Button btn3 = findViewById(R.id.btn_editText);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, EditTextActivity.class);
                 startActivity(i);
             }
         });

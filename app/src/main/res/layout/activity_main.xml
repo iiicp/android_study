@@ -9,12 +9,24 @@
             android:id="@+id/btn_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/textview"/>
+            android:text="@string/textview"
+            android:textAllCaps="false"/>
 
     <Button
             android:id="@+id/btn_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button"
-            android:background="#ffff00"/>
+            android:background="#ffff00"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"/>
+
+    <Button
+            android:id="@+id/btn_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Edittext"
+            android:background="#ffff00"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"/>
 </LinearLayout>
