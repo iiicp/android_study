@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">androidstudy</string>
+    <string name="textview">textview</string>
+    <string name="text_view_1">博学之，审视之，慎思之，明辨之</string>
+    <string name="text_view_2">博学之，审视之，慎思之，明辨之, 博学之，审视之，慎思之，明辨之, 博学之，审视之，慎思之，明辨之</string>
+    <string name="search">搜索</string>
+</resources>
