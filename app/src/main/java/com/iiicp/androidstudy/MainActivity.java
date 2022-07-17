@@ -1,5 +1,6 @@
 package com.iiicp.androidstudy;
 
+import com.iiicp.androidstudy.gridview.GridViewActivity;
 import com.iiicp.androidstudy.listview.ListViewActivity;
 
 import android.annotation.SuppressLint;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn5;
     private Button btn6;
     private Button btn7;
+    private Button btn8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btn5 = findViewById(R.id.btn_checkBox);
         btn6 = findViewById(R.id.btn_imageview);
         btn7 = findViewById(R.id.btn_listview);
+        btn8 = findViewById(R.id.btn_gridview);
 
         setListener();
     }
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btn5.setOnClickListener(click);
         btn6.setOnClickListener(click);
         btn7.setOnClickListener(click);
+        btn8.setOnClickListener(click);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -72,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_listview:
                     i = new Intent(MainActivity.this, ListViewActivity.class);
+                    break;
+                case R.id.btn_gridview:
+                    i = new Intent(MainActivity.this, GridViewActivity.class);
                     break;
             }
             startActivity(i);

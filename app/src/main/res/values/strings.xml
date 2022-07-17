@@ -25,4 +25,6 @@
     <string name="title">我是标题</string>
     <string name="time">我是时间</string>
     <string name="content">我是内容</string>
+    <string name="tree">树</string>
+    <string name="gridview">GridView</string>
 </resources>

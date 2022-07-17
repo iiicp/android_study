@@ -1,4 +1,4 @@
-package com.iiicp.androidstudy.listview;
+package com.iiicp.androidstudy.gridview;
 
 import com.bumptech.glide.Glide;
 import com.iiicp.androidstudy.R;
@@ -11,19 +11,19 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MyListViewAdapter extends BaseAdapter {
+public class GridViewAdapter extends BaseAdapter {
 
-    private final Context mContext;
-    private final LayoutInflater mLayoutInflater;
+    private Context mContext;
+    private LayoutInflater mLayoutInflater;
 
-    MyListViewAdapter(Context context) {
-        mContext = context;
+    GridViewAdapter(Context context) {
+        this.mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        return 10;
+        return 20;
     }
 
     @Override
@@ -36,31 +36,29 @@ public class MyListViewAdapter extends BaseAdapter {
         return 0;
     }
 
+
     private static class ViewHolder {
         public ImageView mIv;
-        public TextView mTv1, mTv2, mTv3;
+        public TextView mTv;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
+
+        ViewHolder holder = null;
+
         if (convertView == null) {
-            convertView = mLayoutInflater.inflate(R.layout.layout_list_item, null);
+            convertView = mLayoutInflater.inflate(R.layout.layout_grid_item, null);
             holder = new ViewHolder();
-            holder.mIv = convertView.findViewById(R.id.iv_0);
-            holder.mTv1 = convertView.findViewById(R.id.tv_1);
-            holder.mTv2 = convertView.findViewById(R.id.tv_2);
-            holder.mTv3 = convertView.findViewById(R.id.tv_3);
+            holder.mIv = convertView.findViewById(R.id.iv);
+            holder.mTv = convertView.findViewById(R.id.tv);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.mTv1.setText("这是标题");
-        holder.mTv2.setText("这是时间111");
-        holder.mTv3.setText("这是内容");
-        Glide.with(mContext).load("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png").into(holder.mIv);
-
+        holder.mTv.setText("大树");
+        Glide.with(mContext).load("https://img2.baidu.com/it/u=1579925377,1914989861&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500").into(holder.mIv);
         return convertView;
     }
 }
