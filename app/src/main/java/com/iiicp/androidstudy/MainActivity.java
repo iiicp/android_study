@@ -1,5 +1,7 @@
 package com.iiicp.androidstudy;
 
+import com.iiicp.androidstudy.listview.ListViewActivity;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn4;
     private Button btn5;
     private Button btn6;
+    private Button btn7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btn4 = findViewById(R.id.btn_radioButton);
         btn5 = findViewById(R.id.btn_checkBox);
         btn6 = findViewById(R.id.btn_imageview);
+        btn7 = findViewById(R.id.btn_listview);
 
         setListener();
     }
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btn4.setOnClickListener(click);
         btn5.setOnClickListener(click);
         btn6.setOnClickListener(click);
+        btn7.setOnClickListener(click);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -64,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_imageview:
                     i = new Intent(MainActivity.this, ImageViewActivity.class);
+                    break;
+                case R.id.btn_listview:
+                    i = new Intent(MainActivity.this, ListViewActivity.class);
                     break;
             }
             startActivity(i);

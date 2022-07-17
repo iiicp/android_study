@@ -21,4 +21,8 @@
     <string name="textContent">你会的移动开发:</string>
     <string name="imageview">ImageView</string>
     <string name="kobe">kobe</string>
+    <string name="listview">ListView</string>
+    <string name="title">我是标题</string>
+    <string name="time">我是时间</string>
+    <string name="content">我是内容</string>
 </resources>
