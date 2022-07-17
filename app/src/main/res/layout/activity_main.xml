@@ -38,4 +38,13 @@
             android:background="#ffff00"
             android:textAllCaps="false"
             android:layout_marginTop="10dp"/>
+
+    <Button
+            android:id="@+id/btn_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox"
+            android:background="#ffff00"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"/>
 </LinearLayout>

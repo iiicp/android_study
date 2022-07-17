@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn2;
     private Button btn3;
     private Button btn4;
+    private Button btn5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btn2 = findViewById(R.id.btn_button);
         btn3 = findViewById(R.id.btn_editText);
         btn4 = findViewById(R.id.btn_radioButton);
+        btn5 = findViewById(R.id.btn_checkBox);
 
         setListener();
     }
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(click);
         btn3.setOnClickListener(click);
         btn4.setOnClickListener(click);
+        btn5.setOnClickListener(click);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_radioButton:
                     i = new Intent(MainActivity.this, RadioButtonActivity.class);
+                    break;
+                case R.id.btn_checkBox:
+                    i = new Intent(MainActivity.this, CheckBoxActivity.class);
                     break;
             }
             startActivity(i);

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+
+    <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textContent"
+            android:textSize="20sp"
+            android:textColor="#000"/>
+
+    <CheckBox
+            android:id="@+id/cb_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/android"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_below="@id/tv_1"/>
+
+    <CheckBox
+            android:id="@+id/cb_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="iOS"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_below="@id/cb_01"/>
+
+    <CheckBox
+            android:id="@+id/cb_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H5"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_below="@id/cb_02"/>
+
+    <CheckBox
+            android:id="@+id/cb_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_below="@id/cb_03"/>
+
+</RelativeLayout>

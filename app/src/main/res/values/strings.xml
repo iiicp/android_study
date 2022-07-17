@@ -16,4 +16,7 @@
     <string name="radiobutton">RadioButton</string>
     <string name="man">男</string>
     <string name="feman">女</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="android">Android</string>
+    <string name="textContent">你会的移动开发:</string>
 </resources>
