@@ -47,4 +47,13 @@
             android:background="#ffff00"
             android:textAllCaps="false"
             android:layout_marginTop="10dp"/>
+
+    <Button
+            android:id="@+id/btn_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/imageview"
+            android:background="#ffff00"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"/>
 </LinearLayout>

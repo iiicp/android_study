@@ -19,4 +19,6 @@
     <string name="checkbox">CheckBox</string>
     <string name="android">Android</string>
     <string name="textContent">你会的移动开发:</string>
+    <string name="imageview">ImageView</string>
+    <string name="kobe">kobe</string>
 </resources>
