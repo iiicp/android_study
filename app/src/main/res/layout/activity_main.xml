@@ -29,4 +29,13 @@
             android:background="#ffff00"
             android:textAllCaps="false"
             android:layout_marginTop="10dp"/>
+
+    <Button
+            android:id="@+id/btn_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobutton"
+            android:background="#ffff00"
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"/>
 </LinearLayout>

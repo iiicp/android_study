@@ -1,5 +1,6 @@
 package com.iiicp.androidstudy;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
@@ -8,36 +9,52 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button btn1;
+    private Button btn2;
+    private Button btn3;
+    private Button btn4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn1 = findViewById(R.id.btn_textview);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, TextViewActivity.class);
-                startActivity(i);
-            }
-        });
+        btn1 = findViewById(R.id.btn_textview);
+        btn2 = findViewById(R.id.btn_button);
+        btn3 = findViewById(R.id.btn_editText);
+        btn4 = findViewById(R.id.btn_radioButton);
 
-        Button btn2 = findViewById(R.id.btn_button);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ButtonActivity.class);
-                startActivity(i);
-            }
-        });
+        setListener();
+    }
 
-        Button btn3 = findViewById(R.id.btn_editText);
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, EditTextActivity.class);
-                startActivity(i);
+    private void setListener() {
+        OnClick click = new OnClick();
+        btn1.setOnClickListener(click);
+        btn2.setOnClickListener(click);
+        btn3.setOnClickListener(click);
+        btn4.setOnClickListener(click);
+    }
+
+    private class OnClick implements View.OnClickListener {
+        @SuppressLint("NonConstantResourceId")
+        @Override
+        public void onClick(View v) {
+            Intent i = null;
+            switch (v.getId()) {
+                case R.id.btn_textview:
+                    i = new Intent(MainActivity.this, TextViewActivity.class);
+                    break;
+                case R.id.btn_button:
+                    i = new Intent(MainActivity.this, ButtonActivity.class);
+                    break;
+                case R.id.btn_editText:
+                    i = new Intent(MainActivity.this, EditTextActivity.class);
+                    break;
+                case R.id.btn_radioButton:
+                    i = new Intent(MainActivity.this, RadioButtonActivity.class);
+                    break;
             }
-        });
+            startActivity(i);
+        }
     }
 }
