@@ -27,4 +27,6 @@
     <string name="content">我是内容</string>
     <string name="tree">树</string>
     <string name="gridview">GridView</string>
+    <string name="tableview">列表视图</string>
+    <string name="recyclerview">RecyclerView</string>
 </resources>
